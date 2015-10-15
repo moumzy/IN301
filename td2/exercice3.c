@@ -66,6 +66,21 @@ Liste ajout_trier(Liste l, int e){
 	return l;
 }
 	
+int taille(Liste l){
+	if(l==NULL) return 0;
+	return 1+taille(l->suivant);
+}
+
+Liste alea_liste(int n){
+	int x; srand(time(NULL));
+	Liste l = init_liste();
+	while(1){
+		x= rand()%n;
+		if(x==0) return l;
+		else l = ajout_debut(l,x);
+	}
+}
+
 	 
 int main(){
 	
@@ -78,7 +93,7 @@ l = ajout_fin(l,4);
 l = ajout_fin(l,5);
 
 afficher(l);
-
+// TESTER ALEA LISTE ET INT TAILLE // 
 return(0);
 }
 
