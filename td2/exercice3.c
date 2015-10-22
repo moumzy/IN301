@@ -132,12 +132,37 @@ return l;
 }	
 
 Liste fusion(Liste l, Liste k){
+	Liste debut, fin;
 	if(estvide(l)) return k;
+	if(estvide(k)) return l;
+	if(l->val < k->val){
+		debut = l;
+		fin = l; l = l->suivant; }
+	else{
+			debut = k;
+			fin = k; k = k->suivant;
+		}
+	while(l != NULL && (k != NULL)){
+		if(l->val<k->val){
+			fin -> suivant = l;
+			l = l->suivant;
+			fin = fin->suivant;
+			}
+		else { 
+			fin -> suivant = k;
+			k= k->suivant;
+			fin = fin-> suivant;
+			} 
+		}
+	if(l == NULL){
+			fin->suivant = k;
+	}
+	else {
+				fin->suivant = l;}
+				return debut;
 	
 	
-	
-	
- }
+}
 
 		 
 int main(){
@@ -156,11 +181,14 @@ k = ajout_debut(k,5);
 k = ajout_debut(k,3);
 k = ajout_debut(k,1);
 
+Liste c = init_liste();
 afficher(l);
-printf(" \n" );
+printf(" \n \n" );
 afficher(k);
+printf(" \n \n" );
+c = fusion(l,k);
+afficher(c);
 
-
-// Toutes les fonctions jusqu'a AleaLIST OK !
+// Toutes les fonctions jusqu'a Fusion OK !
 return(0);
 }	
