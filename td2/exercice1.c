@@ -21,7 +21,7 @@ printf(" %lu " ,sizeof(double) ) ;
 printf(" %lu " ,sizeof(char*) ) ;
 printf(" %lu " ,sizeof(void*) ) ;
 printf(" %lu " ,sizeof(int*) ) ;
-printf(" %lu \n \n" ,sizeof(double*) ) ; 
+printf(" %lu \n \n " ,sizeof(double*) ) ; 
  
 
 printf(" %lu " ,sizeof(int[10]) ) ; 
@@ -32,7 +32,7 @@ printf(" %lu " ,sizeof(tab) ) ;
 printf(" %lu " ,sizeof(tab[0]) ) ;
 printf(" %lu " ,sizeof(&tab[0]) ) ; 
 printf(" %lu " ,sizeof(*&tab) ) ; 
-printf(" %lu \n \n \n" ,sizeof(*&tab[0]) ) ;
+printf(" %lu \n \n \n \n \n \n" ,sizeof(*&tab[0]) ) ;
 // ttcompris //
 
    
@@ -40,7 +40,7 @@ printf(" %lu " ,sizeof(p) ) ;
 printf(" %lu " ,sizeof(*p) ) ; 
 printf(" %lu " ,sizeof((*p)[2]) ) ; 
 printf(" %lu " ,sizeof(&(*p)[2]) ) ; 
-printf(" %lu " ,sizeof(&(*p)[2]) ) ; 
+
 
 
 printf(" \n%d  %d \n" , a , b);
@@ -55,18 +55,3 @@ printf(" \n%d  %d \n" , a , b);
 
 }	
 	
-
-
-
-
-
-	
-  
-	
-	
-	
-	
-	
-	
-	
-
